@@ -26,9 +26,12 @@ AppModule = __decorate([
             typeorm_1.TypeOrmModule.forRootAsync({
                 imports: [config_1.ConfigModule],
                 useFactory: typeorm_config_1.getTypeOrmConfig,
-                inject: [config_1.ConfigService],
+                inject: [config_1.ConfigService]
             }),
-            auth_module_1.AuthModule, _user_module_1.UserModule, comment_module_1.CommentModule, video_module_1.VideoModule
+            auth_module_1.AuthModule,
+            _user_module_1.UserModule,
+            comment_module_1.CommentModule,
+            video_module_1.VideoModule
         ],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService]

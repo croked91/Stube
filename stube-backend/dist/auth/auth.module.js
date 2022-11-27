@@ -27,7 +27,7 @@ AuthModule = __decorate([
             jwt_1.JwtModule.registerAsync({
                 imports: [config_1.ConfigModule],
                 inject: [config_1.ConfigService],
-                useFactory: jwt_config_1.getJwtConfig,
+                useFactory: jwt_config_1.getJwtConfig
             }),
             typeorm_1.TypeOrmModule.forFeature([user_entity_1.UserEntity])
         ]

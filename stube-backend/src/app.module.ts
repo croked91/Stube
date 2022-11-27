@@ -15,11 +15,14 @@ import { VideoModule } from './video/video.module'
 		TypeOrmModule.forRootAsync({
 			imports: [ConfigModule],
 			useFactory: getTypeOrmConfig,
-			inject: [ConfigService],
+			inject: [ConfigService]
 		}),
-		AuthModule, UserModule, CommentModule, VideoModule
+		AuthModule,
+		UserModule,
+		CommentModule,
+		VideoModule
 	],
 	controllers: [AppController],
 	providers: [AppService]
 })
-export class AppModule { }
+export class AppModule {}

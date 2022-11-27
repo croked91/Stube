@@ -1,6 +1,6 @@
 import { SubscriptionEntity } from './subscription.entity';
-import { VideoEntity } from "../video/video.entity";
-import { Base } from "../utils/base";
+import { VideoEntity } from '../video/video.entity';
+import { Base } from '../utils/base';
 export declare class UserEntity extends Base {
     email: string;
     password: string;
