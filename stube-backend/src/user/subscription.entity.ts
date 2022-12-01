@@ -9,7 +9,7 @@ export class SubscriptionEntity extends Base {
 	@JoinColumn({ name: 'from_user_id' })
 	fromUser: UserEntity
 
-	@OneToMany(() => VideoEntity, video => video.user)
+	@ManyToOne(() => UserEntity, user => user.subscriptions)
 	@JoinColumn({ name: 'to_channel_id' })
 	toChannel: UserEntity
 }

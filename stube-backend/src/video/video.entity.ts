@@ -1,5 +1,5 @@
 import { CommentEntity } from './../comment/comment.entity'
-import { UserEntity } from './../-user/user.entity'
+import { UserEntity } from '../user/user.entity'
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany } from 'typeorm'
 import { Base } from '../utils/base'
 

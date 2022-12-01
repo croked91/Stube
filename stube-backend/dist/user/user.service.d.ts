@@ -8,6 +8,6 @@ export declare class UserService {
     constructor(userRepository: Repository<UserEntity>, subscriptionRepository: Repository<SubscriptionEntity>);
     byId(id: number): Promise<UserEntity>;
     updateProfile(id: number, dto: UserDto): Promise<UserEntity>;
-    subscribe(channelId: number, id: number): Promise<boolean>;
+    subscribe(id: number, channelId: number): Promise<boolean>;
     getAll(): Promise<UserEntity[]>;
 }

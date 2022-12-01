@@ -57,13 +57,12 @@ let UserService = class UserService {
         user.avatarPath = dto.avatarPath;
         return this.userRepository.save(user);
     }
-    async subscribe(channelId, id) {
+    async subscribe(id, channelId) {
         const data = {
             toChannel: { id: channelId },
-            fromUser: { id }
+            fromUser: { id },
         };
         const isSubscribed = await this.subscriptionRepository.findOneBy(data);
-        console.log(isSubscribed);
         if (!isSubscribed) {
             const newSubscribtion = await this.subscriptionRepository.create(data);
             await this.subscriptionRepository.save(newSubscribtion);
@@ -84,4 +83,4 @@ UserService = __decorate([
         typeorm_2.Repository])
 ], UserService);
 exports.UserService = UserService;
-//# sourceMappingURL=-user.service.js.map
+//# sourceMappingURL=user.service.js.map

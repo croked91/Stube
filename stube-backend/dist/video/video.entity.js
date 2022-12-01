@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.VideoEntity = void 0;
 const comment_entity_1 = require("./../comment/comment.entity");
-const user_entity_1 = require("./../-user/user.entity");
+const user_entity_1 = require("../user/user.entity");
 const typeorm_1 = require("typeorm");
 const base_1 = require("../utils/base");
 let VideoEntity = class VideoEntity extends base_1.Base {

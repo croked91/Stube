@@ -1,5 +1,5 @@
 import { AuthDto } from './auth.dto';
-import { UserEntity } from './../-user/user.entity';
+import { UserEntity } from '../user/user.entity';
 import { Repository } from 'typeorm';
 import { JwtService } from '@nestjs/jwt';
 export declare class AuthService {

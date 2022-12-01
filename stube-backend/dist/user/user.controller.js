@@ -65,7 +65,6 @@ __decorate([
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "updateUser", null);
 __decorate([
-    (0, common_1.UsePipes)(new common_1.ValidationPipe()),
     (0, common_1.HttpCode)(200),
     (0, common_1.Patch)('subscribe/:channelId'),
     (0, auth_decorator_1.Auth)(),
@@ -86,4 +85,4 @@ UserController = __decorate([
     __metadata("design:paramtypes", [user_service_1.UserService])
 ], UserController);
 exports.UserController = UserController;
-//# sourceMappingURL=-user.controller.js.map
+//# sourceMappingURL=user.controller.js.map

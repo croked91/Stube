@@ -17,7 +17,7 @@ export class UserService {
 		private readonly userRepository: Repository<UserEntity>,
 		@InjectRepository(SubscriptionEntity)
 		private readonly subscriptionRepository: Repository<SubscriptionEntity>
-	) {}
+	) { }
 
 	async byId(id: number) {
 		const user = await this.userRepository.findOne({
@@ -64,7 +64,7 @@ export class UserService {
 	async subscribe(id: number, channelId: number) {
 		const data = {
 			toChannel: { id: channelId },
-			fromUser: { id }
+			fromUser: { id },
 		}
 
 		const isSubscribed = await this.subscriptionRepository.findOneBy(data)
@@ -72,7 +72,6 @@ export class UserService {
 		if (!isSubscribed) {
 			const newSubscribtion = await this.subscriptionRepository.create(data)
 			await this.subscriptionRepository.save(newSubscribtion)
-
 			return true
 		}
 

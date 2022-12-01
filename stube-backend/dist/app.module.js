@@ -14,7 +14,7 @@ const typeorm_1 = require("@nestjs/typeorm");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const auth_module_1 = require("./auth/auth.module");
-const _user_module_1 = require("./-user/-user.module");
+const user_module_1 = require("./user/user.module");
 const comment_module_1 = require("./comment/comment.module");
 const video_module_1 = require("./video/video.module");
 let AppModule = class AppModule {
@@ -29,7 +29,7 @@ AppModule = __decorate([
                 inject: [config_1.ConfigService]
             }),
             auth_module_1.AuthModule,
-            _user_module_1.UserModule,
+            user_module_1.UserModule,
             comment_module_1.CommentModule,
             video_module_1.VideoModule
         ],

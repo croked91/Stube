@@ -1,4 +1,4 @@
-import { UserEntity } from './../../-user/user.entity'
+import { UserEntity } from '../../user/user.entity'
 import { ConfigService } from '@nestjs/config'
 import { ExtractJwt, Strategy } from 'passport-jwt'
 import { PassportStrategy } from '@nestjs/passport'

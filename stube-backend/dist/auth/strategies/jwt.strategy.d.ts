@@ -1,4 +1,4 @@
-import { UserEntity } from './../../-user/user.entity';
+import { UserEntity } from '../../user/user.entity';
 import { ConfigService } from '@nestjs/config';
 import { Repository } from 'typeorm';
 declare const JwtStrategy_base: new (...args: any[]) => any;

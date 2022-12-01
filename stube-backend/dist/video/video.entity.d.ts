@@ -1,5 +1,5 @@
 import { CommentEntity } from './../comment/comment.entity';
-import { UserEntity } from './../-user/user.entity';
+import { UserEntity } from '../user/user.entity';
 import { Base } from '../utils/base';
 export declare class VideoEntity extends Base {
     name: string;
