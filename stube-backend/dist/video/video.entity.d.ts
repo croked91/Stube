@@ -6,9 +6,10 @@ export declare class VideoEntity extends Base {
     isPublic: boolean;
     views?: number;
     likes?: number;
+    description?: string;
     duration?: number;
     videoPath?: string;
-    thumbnailPath: string;
+    thumbnailPath?: string;
     user: UserEntity;
     comments: CommentEntity[];
 }

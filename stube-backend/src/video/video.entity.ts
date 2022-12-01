@@ -17,6 +17,9 @@ export class VideoEntity extends Base {
 	@Column({ default: 0 })
 	likes?: number
 
+	@Column({ default: "" })
+	description?: string
+
 	@Column({ default: 0 })
 	duration?: number
 
@@ -24,7 +27,7 @@ export class VideoEntity extends Base {
 	videoPath?: string
 
 	@Column({ default: '', name: 'thumbnail_path' })
-	thumbnailPath: string
+	thumbnailPath?: string
 
 	@ManyToOne(() => UserEntity, user => user.videos)
 	@JoinColumn({ name: 'user_id' })

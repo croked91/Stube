@@ -1,13 +1,24 @@
-import { UserDto } from './user.dto';
-import { AuthDto } from '../auth/auth.dto';
-import { Body, Controller, Get, HttpCode, Param, Patch, Post, Put, UsePipes, ValidationPipe } from '@nestjs/common'
+import { UserDto } from './user.dto'
+import { AuthDto } from '../auth/auth.dto'
+import {
+	Body,
+	Controller,
+	Get,
+	HttpCode,
+	Param,
+	Patch,
+	Post,
+	Put,
+	UsePipes,
+	ValidationPipe
+} from '@nestjs/common'
 import { Auth } from 'src/auth/decorators/auth.decorator'
 import { UserService } from './user.service'
 import { CurrentUser } from './user.decorator'
 
 @Controller('user')
 export class UserController {
-	constructor(private readonly userService: UserService) { }
+	constructor(private readonly userService: UserService) {}
 
 	@Get('profile')
 	@Auth()
@@ -28,11 +39,13 @@ export class UserController {
 		return this.userService.updateProfile(+id, dto)
 	}
 
-
 	@HttpCode(200)
 	@Patch('subscribe/:channelId')
 	@Auth()
-	async subscribeToChannel(@CurrentUser('id') id: number, @Param('channelId') channelId: string) {
+	async subscribeToChannel(
+		@CurrentUser('id') id: number,
+		@Param('channelId') channelId: string
+	) {
 		return this.userService.subscribe(id, +channelId)
 	}
 

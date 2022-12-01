@@ -60,7 +60,7 @@ let UserService = class UserService {
     async subscribe(id, channelId) {
         const data = {
             toChannel: { id: channelId },
-            fromUser: { id },
+            fromUser: { id }
         };
         const isSubscribed = await this.subscriptionRepository.findOneBy(data);
         if (!isSubscribed) {
