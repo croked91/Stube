@@ -5,9 +5,6 @@ import { Base } from '../utils/base'
 
 @Entity('Comment')
 export class CommentEntity extends Base {
-	@Column()
-	name: string
-
 	@Column({ type: 'text' })
 	message: string
 

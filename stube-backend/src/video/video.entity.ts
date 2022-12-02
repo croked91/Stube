@@ -17,7 +17,7 @@ export class VideoEntity extends Base {
 	@Column({ default: 0 })
 	likes?: number
 
-	@Column({ default: "" })
+	@Column({ default: '' })
 	description?: string
 
 	@Column({ default: 0 })

@@ -33,7 +33,7 @@ __decorate([
     __metadata("design:type", Number)
 ], VideoEntity.prototype, "likes", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ default: "" }),
+    (0, typeorm_1.Column)({ default: '' }),
     __metadata("design:type", String)
 ], VideoEntity.prototype, "description", void 0);
 __decorate([

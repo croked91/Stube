@@ -17,10 +17,6 @@ const base_1 = require("../utils/base");
 let CommentEntity = class CommentEntity extends base_1.Base {
 };
 __decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], CommentEntity.prototype, "name", void 0);
-__decorate([
     (0, typeorm_1.Column)({ type: 'text' }),
     __metadata("design:type", String)
 ], CommentEntity.prototype, "message", void 0);

@@ -1,17 +1,17 @@
 import { IsString, IsEmail } from 'class-validator'
 
 export class VideoDto {
-  @IsString()
-  name?: string
+	@IsString()
+	name?: string
 
-  isPublic?: boolean
+	isPublic?: boolean
 
-  @IsString()
-  description?: string
+	@IsString()
+	description?: string
 
-  @IsString()
-  videoPath?: string
+	@IsString()
+	videoPath?: string
 
-  @IsString()
-  thumbnailPath?: string
+	@IsString()
+	thumbnailPath?: string
 }
