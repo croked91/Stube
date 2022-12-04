@@ -1,5 +1,5 @@
 import { IBase } from './base.interface'
-import { ISubscription, IUser } from './user.interface'
+import { IUser } from './user.interface'
 import { IVideo } from './video.interface'
 
 export interface IComment extends IBase {

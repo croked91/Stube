@@ -15,3 +15,4 @@ export interface IUser extends IBase {
 export interface ISubscription extends IBase {
 	toChannel: IUser
 }
+
